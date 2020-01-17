@@ -1,0 +1,36 @@
+.img-responsive.logo-pokemon{
+    max-width: 60%;
+    margin: 30px auto 0;
+}
+
+header.container-fluid{
+    background-color: #696969;
+}
+
+main.container-fluid{
+    background-color: #696969;
+}
+
+.pokemon-card {
+    border: 1px solid #000000;
+    margin: 10px;
+    padding: 0px;
+    min-width: 170px;
+    width: 170px;
+    max-width: 170px;
+    border-radius: 10px;
+}
+
+.pokemon-card:hover {
+    transition: 500ms all;
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+    border-color: #c78c19;
+}
+
+.modal-content {
+color: #c78c19;
+background-color: black;
+
+}
