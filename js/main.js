@@ -3,6 +3,10 @@ types.forEach(function (type) {
     type.addEventListener('click', function () {
         var typeForFilter = type.className;
         typeForFilter = typeForFilter.replace(' type', '');
+        var urlPorTipo = "type/"
+        console.log(typeForFilter)
+        limpaBox()
+        BuscaPorTipos(typeForFilter)
     })
 });
 
@@ -24,3 +28,12 @@ form.addEventListener('submit', function(e){
         alert("Pokemon ainda não descoberto! Tente no maximo 807 ;)")
     }
 })
+ function limpaBox(){
+     var boxJS = document.querySelector("#boxJS")
+     var filhos = document.querySelectorAll(".pokemonGerado")
+     filhos.forEach(function(filho){
+        boxJS.removeChild(filho)
+
+     })
+     return
+ }

@@ -1,8 +1,8 @@
-var urlInicio = 'https://pokeapi.co/api/v2/pokemon'
+var urlInicio = 'https://pokeapi.co/api/v2/'
 
 function buscaInicial(func) {
     
-    var limite = "?limit=30"
+    var limite = "pokemon?limit=30"
     var xhr = new XMLHttpRequest();
     xhr.open('GET', urlInicio + limite);
     var retorno = xhr.addEventListener('readystatechange', function() {
@@ -46,6 +46,7 @@ function criaCardPokemon(nome, urlImagem) {
     divPai.classList.add("col-md-2");
     divPai.classList.add("col-lg-2");
     divPai.classList.add("text-center");
+    divPai.classList.add("pokemonGerado")
 
     var divFilha = document.createElement('div')
     divFilha.classList.add("pokemon-card");
