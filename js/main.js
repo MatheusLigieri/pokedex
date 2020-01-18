@@ -3,7 +3,6 @@ types.forEach(function (type) {
     type.addEventListener('click', function () {
         var typeForFilter = type.className;
         typeForFilter = typeForFilter.replace(' type', '');
-        console.log(typeForFilter)
     })
 });
 

@@ -1,0 +1,2 @@
+1. conseguir pegar todos os elementos de tipo de uma vez (pegar todos em uma variavel);
+2. colocar um ouvidor pra cada tipo de uma vez o click (forEach);
