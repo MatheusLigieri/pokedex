@@ -55,11 +55,3 @@ function BuscaPorTipos(type) {
     });
     xhr.send();
 }
-
-
-
-
-
-
-
-

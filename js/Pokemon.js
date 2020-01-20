@@ -31,7 +31,8 @@ function buscaPorPokemon(pokemons){
                     var dadoJSON = JSON.parse(dado);
                     var nomePokemon = dadoJSON.name;
                     var imagemPokemon = dadoJSON.sprites.front_default;
-                    criaCardPokemon(nomePokemon, imagemPokemon)
+                    var id = dadoJSON.id;
+                    criaCardPokemon(nomePokemon, imagemPokemon, id)
                 };
             };
         })
@@ -39,7 +40,7 @@ function buscaPorPokemon(pokemons){
     });
 }
 
-function criaCardPokemon(nome, urlImagem) {
+function criaCardPokemon(nome, urlImagem, numero) {
     var divPai = document.createElement('div')
     divPai.classList.add("col-xs-12");
     divPai.classList.add("col-sm-4");
@@ -50,6 +51,7 @@ function criaCardPokemon(nome, urlImagem) {
 
     var divFilha = document.createElement('div')
     divFilha.classList.add("pokemon-card");
+    divFilha.setAttribute("data-id", numero)
 
     var imagemPokemon = document.createElement('img');
     imagemPokemon.setAttribute("src", urlImagem);

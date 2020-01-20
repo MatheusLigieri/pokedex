@@ -25,8 +25,12 @@ form.addEventListener('submit', function(e){
     e.preventDefault()
     var id = inputID.value
     if (id == 0 || id < 0 || id > 807){
-        alert("Pokemon ainda não descoberto! Tente no maximo 807 ;)")
+        alert("Pokemon ainda não descoberto! Tente no maximo 807 ;)");
+    } else {
+        limpaBox()
+        buscaID(id)
     }
+
 })
  function limpaBox(){
      var boxJS = document.querySelector("#boxJS")

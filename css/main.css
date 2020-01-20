@@ -1,3 +1,7 @@
+body{
+background-color: #696969;
+}
+
 .img-responsive.logo-pokemon{
     max-width: 60%;
     margin: 30px auto 0;
