@@ -1,2 +1,11 @@
-1. conseguir pegar todos os elementos de tipo de uma vez (pegar todos em uma variavel);
-2. colocar um ouvidor pra cada tipo de uma vez o click (forEach);
+1. Estudar estrutura de dados do pokemon
+2. Colocar na div filha atributos data setatribut(data-id=)
+
+
+========================================================================
+git status (esse comando mostra os status de arquivos);
+git add . (Adiciona todos os arquivos para subir);
+git commit -m (adiciona comentário);
+git push (empurra) 
+========================================================================
+git checkout branch (troca de branch, TROCAR BRANCH PELO NOME QUE QUER)

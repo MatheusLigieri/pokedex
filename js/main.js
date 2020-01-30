@@ -5,8 +5,8 @@ types.forEach(function (type) {
         typeForFilter = typeForFilter.replace(' type', '');
         var urlPorTipo = "type/"
         console.log(typeForFilter)
-        limpaBox()
-        BuscaPorTipos(typeForFilter)
+        // limpaBox()
+        // BuscaPorTipos(typeForFilter)
     })
 });
 
@@ -24,20 +24,22 @@ var inputID = document.querySelector('.buscaID form input');
 form.addEventListener('submit', function(e){
     e.preventDefault()
     var id = inputID.value
-    if (id == 0 || id < 0 || id > 807){
-        alert("Pokemon ainda não descoberto! Tente no maximo 807 ;)");
+    if (id == 0 || id < 0 || id > limite){
+        alert("Pokemon ainda não descoberto! Tente no maximo " + limite);
     } else {
-        limpaBox()
-        buscaID(id)
+        // limpaBox()
+        // buscaID(id)
     }
 
 })
- function limpaBox(){
-     var boxJS = document.querySelector("#boxJS")
-     var filhos = document.querySelectorAll(".pokemonGerado")
-     filhos.forEach(function(filho){
-        boxJS.removeChild(filho)
+//  function limpaBox(){
+//      var boxJS = document.querySelector("#boxJS")
+//      var filhos = document.querySelectorAll(".pokemonGerado")
+//      filhos.forEach(function(filho){
+//         boxJS.removeChild(filho)
 
-     })
-     return
- }
+//      })
+//      return
+//  }
+
+ 
