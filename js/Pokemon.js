@@ -56,7 +56,7 @@ function buscaPorPokemon(pokemons){
                     var tipoNome
                     for (i = 0; i < tipos.length; i++){
                         tipos[i].type.name
-                        console.log(tipos[i].type.name)
+                    
                         if(tipoNome != undefined){
                             tipoNome = tipoNome + " " + tipos[i].type.name
                         } else {
@@ -74,12 +74,16 @@ function buscaPorPokemon(pokemons){
                     
 
                     criaCardPokemon(nomePokemon, imagemPokemon, id, tipoNome, speed, spDef, spAtq, def, atq, hp)
+                    
                 };
             };
         })
         xhr.send();
     });
 }
+
+ordenaID ()
+
 
 function criaCardPokemon(nome, urlImagem, numero, tipo, speed, spDef, spAtq, def, atq, hp ) {
     var divPai = document.createElement('div')
@@ -116,3 +120,52 @@ function criaCardPokemon(nome, urlImagem, numero, tipo, speed, spDef, spAtq, def
     boxJS.appendChild(divPai);
 }
 
+function filtroTipo(tipoRecebido){
+    var pokemons = document.querySelectorAll(".pokemon-card")
+    pokemons.forEach(function(pokemon){
+        var tipo = pokemon.getAttribute("data-tipo")
+        var verdade = tipo.includes (tipoRecebido)
+        var pai = pokemon.parentElement
+        if (verdade == true){
+            pai.style.display = "block"
+        }else if (verdade == false){
+            pai.style.display = "none"
+        }
+    })
+}
+    function ordenaID (){
+    setTimeout(function(){
+        var pokemons = document.querySelectorAll(".pokemon-card")
+        var array = []
+        pokemons.forEach(function(pokemon){
+            array.push(pokemon)
+            
+        })
+
+        console.log(array)
+                
+        array.sort(function(a, b){
+                // console.log(a.dataset.id - b.dataset.id)
+                return a.dataset.id - b.dataset.id
+
+            })    
+        limpaBox()
+        var pokemonBox = document.querySelector(".pokemon-box")
+        // array.forEach(function(pokemon){
+        //     pokemonBox.appendChild(pokemon)
+        // })
+           for (i = 0; i < array.length; i++){
+            var divPai = document.createElement('div')
+            divPai.classList.add("col-xs-12");
+            divPai.classList.add("col-sm-4");
+            divPai.classList.add("col-md-2");
+            divPai.classList.add("col-lg-2");
+            divPai.classList.add("text-center");
+            divPai.classList.add("pokemonGerado")
+        divPai.appendChild(array[i])
+            pokemonBox.appendChild(divPai)
+           }
+           console.log(array)
+    
+    },8000)
+}

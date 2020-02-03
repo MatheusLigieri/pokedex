@@ -5,7 +5,10 @@ types.forEach(function (type) {
         typeForFilter = typeForFilter.replace(' type', '');
         var urlPorTipo = "type/"
         console.log(typeForFilter)
+        filtroTipo(typeForFilter)
+
         // limpaBox()
+
         // BuscaPorTipos(typeForFilter)
     })
 });
@@ -32,14 +35,14 @@ form.addEventListener('submit', function(e){
     }
 
 })
-//  function limpaBox(){
-//      var boxJS = document.querySelector("#boxJS")
-//      var filhos = document.querySelectorAll(".pokemonGerado")
-//      filhos.forEach(function(filho){
-//         boxJS.removeChild(filho)
+ function limpaBox(){
+     var boxJS = document.querySelector("#boxJS")
+     var filhos = document.querySelectorAll(".pokemonGerado")
+     filhos.forEach(function(filho){
+        boxJS.removeChild(filho)
 
-//      })
-//      return
-//  }
+     })
+     return
+ }
 
  
